@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="http://fonts.cdnfonts.com/css/starfleet" rel="stylesheet">   
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1 class="titulo">PROGRAMA DE ENCRIPTADO/DESENCRIPTADO</h1>
+
+  <main class="main">
+    <section class="form box">
+      <form action="">
+        <label for="input-texto" class="label-box1">NO INGRESAR MAYUSCULAS, NUMEROS O ACENTOS</label>
+        <!--Uso el evento Onekeypress para restringir efectivamente los caracteres tipeados en el campo de entrada
+        a sólo minúsculas, sin acentos ni caracteres especiales (permitida la ñ, punto y la coma)-->
+        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aqui" autofocus
+         onkeypress="return (event.charCode >= 97 && event.charCode <= 122 || (event.charCode == 241)||(event.charCode == 32)||(event.charCode == 44)||(event.charCode == 46))">
+        <input class="btn" type="submit" value="ENCRIPTAR" id="btn-encriptar">
+        <input class="btn" type="submit" value="DESENCRIPTAR" id="btn-desencriptar">
+      </form>
+    </section>
+  
+    <section class="msg box">
+      <h2 id="" class="label-box1">RESULTADO DE LA OPERACION</h2>
+      <input class="text-input" type="text" id="msg"></input>
+      <input class="btn" type="submit" value="COPIAR" id="btn-copy">
+    </section>
+  </main>
+
+  <div id="footer">
+    <footer>
+      <p>POR GASTON SANDOVAL, CON MOTIVO DEL PRIMER ALURA CHALLENGE - ORACLE ONE</p>
+    </footer>
+  
+  </div>
+  
+  <script src="js/encriptar.js"></script>
+  <script src="js/desencriptar.js"></script>
+  <script src="js/copiarTexto.js"></script>
+</body>
+</html>
